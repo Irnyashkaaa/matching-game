@@ -1,0 +1,37 @@
+.board {
+    width: 600px;
+    background-color: rgb(143, 112, 112);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cell {
+    width: 125px;
+    height: 125px;
+    margin: 10px;
+    padding: 2px;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell img {
+    width: 120px;
+    animation-name: flip;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    max-width: 10em !important
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(600px) rotateY(0);
+    }
+
+    100% {
+        transform: perspective(600px) rotateY(90deg);
+    }
+}
