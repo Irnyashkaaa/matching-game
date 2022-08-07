@@ -34,6 +34,7 @@ const App: React.FC = () => {
   const [cells, setCells] = useState<celltype[] | []>(initCells)
   const [isGame, setIsGame] = useState<boolean>(false)
   const [currentCells, setCurrentCells] = useState<celltype[]>([initCurrentCell, initCurrentCell])
+  const [openCells, setOpenCells] = useState<celltype[]>([])
 
   let imageNumber = 0
   let imageCount: number[] = [0, 0, 0, 0, 0, 0, 0, 0]
@@ -44,7 +45,11 @@ const App: React.FC = () => {
     //check is current cells` images are the same
     if (currentCells && currentCells.length === 2 && currentCells[0].image !== 8 && currentCells[1].image !== 8 && currentCells[0].cellId !== currentCells[1].cellId) {
       if (currentCells[0].image === currentCells[1].image) {
-        alert('check')
+        let newCells = [...openCells]
+        let newCurrentCells = [...currentCells]
+        newCells.push(newCurrentCells[0], newCurrentCells[1])
+        setOpenCells(newCells)
+        setCurrentCells([initCurrentCell, initCurrentCell])
       } else {
         let newCells = [...cells]
         newCells[currentCells[0].cellId].isCurrent = false
