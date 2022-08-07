@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/matching-game/static/css/main.1e4f98c5.css",
+    "main.js": "/matching-game/static/js/main.43eea194.js",
+    "static/js/787.f0488d0e.chunk.js": "/matching-game/static/js/787.f0488d0e.chunk.js",
+    "static/media/hugyCat.png": "/matching-game/static/media/hugyCat.320a18c6d1b14b2191c4.png",
+    "static/media/shyCat.png": "/matching-game/static/media/shyCat.26576806f66faa6b6b93.png",
+    "static/media/warmCat.png": "/matching-game/static/media/warmCat.d682626eb593403905a4.png",
+    "static/media/justCat.png": "/matching-game/static/media/justCat.856c3e699101d74777b5.png",
+    "static/media/angryCat.png": "/matching-game/static/media/angryCat.c4af5c248868ee941d66.png",
+    "static/media/catWithTea.png": "/matching-game/static/media/catWithTea.754ce511b9e7251e15bf.png",
+    "static/media/lapa.png": "/matching-game/static/media/lapa.752ce867a07bd0e03e6a.png",
+    "static/media/bigCat.png": "/matching-game/static/media/bigCat.7fc1023624af78829730.png",
+    "index.html": "/matching-game/index.html",
+    "main.1e4f98c5.css.map": "/matching-game/static/css/main.1e4f98c5.css.map",
+    "main.43eea194.js.map": "/matching-game/static/js/main.43eea194.js.map",
+    "787.f0488d0e.chunk.js.map": "/matching-game/static/js/787.f0488d0e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e4f98c5.css",
+    "static/js/main.43eea194.js"
+  ]
+}
