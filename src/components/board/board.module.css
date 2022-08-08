@@ -6,6 +6,25 @@
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 630px) {
+    .board {
+        width: 410px
+    }
+}
+
+@media (max-width: 420px) {
+    .board {
+        width: 320px;
+    }
+}
+
+@media (max-width: 330px) {
+    .board {
+        width: 280px
+    }
+}
+
 .cell {
     width: 125px;
     height: 125px;
@@ -16,10 +35,57 @@
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 630px) {
+    .cell {
+        margin: 4px;
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cell {
+        margin: 2px;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 330px) {
+    .cell {
+        margin: 1px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
 .cell img {
     width: 120px;
     height: 120px;
 }
+
+@media (max-width: 630px) {
+    .cell img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cell img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 330px) {
+    .cell img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
 .imageContainer {
     background-color: aliceblue;
 }
@@ -32,6 +98,7 @@
     animation-iteration-count: 1;
     max-width: 10em !important;
 }
+
 .imageHide {
     animation-name: hide;
     animation-timing-function: ease-in-out;
@@ -46,12 +113,15 @@
         transform: perspective(600px) rotateY(0);
         opacity: 1;
     }
+
     34% {
         opacity: 1;
     }
+
     35% {
         opacity: 0;
     }
+
     100% {
         transform: perspective(600px) rotateY(360deg);
         opacity: 0;
@@ -63,18 +133,21 @@
         transform: perspective(600px) rotateY(0);
         opacity: 0;
     }
+
     75% {
         opacity: 0;
     }
+
     100% {
         transform: perspective(600px) rotateY(360deg);
         opacity: 1;
     }
 }
+
 .notCurrentImage {
     opacity: 0;
 }
+
 .currentImage {
     opacity: 1;
 }
-
