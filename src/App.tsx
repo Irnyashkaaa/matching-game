@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Board } from './components/board/board';
+import { FinishAlert } from './components/finishAlert/finishAlert';
 
 export type celltype = {
   image: number | null
@@ -35,6 +36,7 @@ const App: React.FC = () => {
   const [isGame, setIsGame] = useState<boolean>(false)
   const [currentCells, setCurrentCells] = useState<celltype[]>([initCurrentCell, initCurrentCell])
   const [openCells, setOpenCells] = useState<celltype[]>([])
+  const [gameFinish, setIsGameFinish] = useState<boolean>(false)
 
   let imageNumber = 0
   let imageCount: number[] = [0, 0, 0, 0, 0, 0, 0, 0]
@@ -85,6 +87,12 @@ const App: React.FC = () => {
   }
 
   useEffect(() => {
+    if (openCells && openCells.length === 16) {
+      setIsGameFinish(true)
+    }
+  }, [openCells])
+
+  useEffect(() => {
     setRandomImageToCells()
     setIsGame(true)
   }, [])
@@ -94,6 +102,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+      <FinishAlert isGameFinish={gameFinish}/>
       <Board currentCells={currentCells} setCurrentCells={setCurrentCells} setCells={setCells} cells={cells} />
     </div>
   )

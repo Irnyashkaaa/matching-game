@@ -1,0 +1,10 @@
+.finishAlert {
+    margin: 30px;
+    color: azure;
+    padding: 20px;
+    background-color: rgb(112, 74, 67);
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
